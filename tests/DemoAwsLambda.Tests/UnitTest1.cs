@@ -18,4 +18,12 @@ public class FunctionTests
 
         Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest(), null!));
     }
+
+    [Fact]
+    public void FunctionHandler_Throws_WhenNameIsWhitespaceOnly()
+    {
+        var function = new Function();
+
+        Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest { Name = "   " }, null!));
+    }
 }
