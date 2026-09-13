@@ -6,9 +6,9 @@ public class FunctionTests
     public void FunctionHandler_ReturnsGreeting_WhenNameIsProvided()
     {
         var function = new Function();
-        var result = function.FunctionHandler(new PersonRequest { Name = "Jose" }, null!);
+        var result = function.FunctionHandler(new PersonRequest { Name = "Paola" }, null!);
 
-        Assert.Equal("hello Jose, thanks for your Request.", result);
+        Assert.Equal("hello Paola, thanks for your Request.", result);
     }
 
     [Fact]
