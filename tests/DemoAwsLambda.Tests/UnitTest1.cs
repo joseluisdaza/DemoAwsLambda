@@ -22,6 +22,15 @@ public class FunctionTests
     }
 
     [Fact]
+    public void FunctionHandler_Throws_WhenRequestIsNull()
+    {
+        var function = new Function();
+
+        var exception = Assert.Throws<ArgumentNullException>(() => function.FunctionHandler(null, null!));
+        Assert.Equal("request", exception.ParamName);
+    }
+
+    [Fact]
     public void FunctionHandler_Throws_WhenNameIsWhitespaceOnly()
     {
         var function = new Function();

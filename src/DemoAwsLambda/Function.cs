@@ -7,8 +7,10 @@ namespace DemoAwsLambda;
 
 public class Function
 {
-    public string FunctionHandler(PersonRequest request, ILambdaContext context)
+    public string FunctionHandler(PersonRequest? request, ILambdaContext context)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var name = request.Name?.Trim();
         if (string.IsNullOrWhiteSpace(name))
         {
