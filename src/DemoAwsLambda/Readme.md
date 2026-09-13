@@ -38,12 +38,12 @@ If already installed check if new version is available.
 
 Execute unit tests
 ```
-    cd "DemoAwsLambda/tests/DemoAwsLambda.Tests"
+    cd "tests/DemoAwsLambda.Tests"
     dotnet test
 ```
 
 Deploy function to AWS Lambda
 ```
-    cd "DemoAwsLambda/src/DemoAwsLambda"
+    cd "src/DemoAwsLambda"
     dotnet lambda deploy-function
 ```
