@@ -6,7 +6,7 @@ This starter project consists of:
 
 You may also have a test project depending on the options selected.
 
-The generated function handler accepts a JSON object with a `name` property and returns `hello {name}, thanks for your Request.`.
+The generated function handler accepts a JSON object with a `name` property and returns `hello {name}, thanks for your Request.`. Empty or whitespace-only values for `name` are rejected.
 
 ## Here are some steps to follow from Visual Studio:
 

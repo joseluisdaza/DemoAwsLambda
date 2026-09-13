@@ -12,7 +12,7 @@ public class Function
         var name = request.Name?.Trim();
         if (string.IsNullOrWhiteSpace(name))
         {
-            throw new ArgumentException("The request must contain a non-empty name.", nameof(request));
+            throw new ArgumentException("The request must contain a non-empty name.", nameof(request.Name));
         }
 
         return $"hello {name}, thanks for your Request.";

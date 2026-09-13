@@ -16,7 +16,9 @@ public class FunctionTests
     {
         var function = new Function();
 
-        Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest(), null!));
+        var exception = Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest(), null!));
+        Assert.Equal("Name", exception.ParamName);
+        Assert.Contains("non-empty name", exception.Message);
     }
 
     [Fact]
@@ -24,6 +26,8 @@ public class FunctionTests
     {
         var function = new Function();
 
-        Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest { Name = "   " }, null!));
+        var exception = Assert.Throws<ArgumentException>(() => function.FunctionHandler(new PersonRequest { Name = "   " }, null!));
+        Assert.Equal("Name", exception.ParamName);
+        Assert.Contains("non-empty name", exception.Message);
     }
 }
