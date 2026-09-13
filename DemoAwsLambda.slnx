@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DemoAwsLambda/DemoAwsLambda.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DemoAwsLambda.Tests/DemoAwsLambda.Tests.csproj" />
+  </Folder>
+</Solution>
